@@ -6,4 +6,4 @@
 
 ## Authors 
 (add your name)
-Andre Telfer
+Andre Telfer (andretelfer@cmail.carleton.ca)
