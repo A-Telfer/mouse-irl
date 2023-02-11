@@ -1,2 +1,2 @@
 # COMP5900J Project 
-Documentation: https://mouse-irl.github.io
+Documentation: https://a-telfer.github.io/mouse-irl/intro.html
