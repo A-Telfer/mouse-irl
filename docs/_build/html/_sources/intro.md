@@ -1,4 +1,4 @@
-# COMP5900 Mice IRL
+# COMP5900 Mouse IRL
 Using Inverse Reinforcement Learning to infer the reward functions of mice in a popular behavioural paradigm (Open Field Test)
 ![](demo.gif)
 
