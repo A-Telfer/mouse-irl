@@ -8,8 +8,8 @@ Using Inverse Reinforcement Learning to infer the reward functions of mice in a 
 
 ## Setup
 ```
-git clone git@github.com:A-Telfer/comp5900j-project.git
-cd comp5900j-project
+git clone git@github.com:A-Telfer/mouse-irl.git
+cd mouse-irl
 pip install .
 python demo.py
 ```
