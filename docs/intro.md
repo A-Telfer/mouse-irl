@@ -19,6 +19,7 @@ pip install jupyter-book
 Then build changes
 ```
 jb build docs
+mv docs/_build docs_build
 ```
 
 
