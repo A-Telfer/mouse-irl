@@ -1,0 +1,1214 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Experiment Data Conversion &#8212; My sample book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Playback Agent" href="playback_agent.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    COMP5900 Mice IRL
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="playback_agent.html">
+   Playback Agent
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Experiment Data Conversion
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/real_data_conversion.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Freal_data_conversion.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/real_data_conversion.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-folders">
+   Data Folders
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#registration">
+   Registration
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#coordinates-to-grid">
+   Coordinates to grid
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#coordinates-to-actions">
+   Coordinates to actions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#final">
+   Final
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Experiment Data Conversion</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-folders">
+   Data Folders
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#registration">
+   Registration
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#coordinates-to-grid">
+   Coordinates to grid
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#coordinates-to-actions">
+   Coordinates to actions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#final">
+   Final
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="experiment-data-conversion">
+<h1>Experiment Data Conversion<a class="headerlink" href="#experiment-data-conversion" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">shutil</span> 
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">draw</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">combinations</span>
+<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageOps</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">List</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">cv2</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">shutil</span> 
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;cv2&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># These are local files in the repository</span>
+<span class="kn">from</span> <span class="nn">telfer_video_io</span> <span class="kn">import</span> <span class="n">get_fname</span><span class="p">,</span> <span class="n">VideoWriter</span><span class="p">,</span> <span class="n">VideoReader</span>
+<span class="kn">from</span> <span class="nn">telfer_transforms</span> <span class="kn">import</span> <span class="n">transform_array_to_perspective</span><span class="p">,</span> <span class="n">transform_dataframe_to_perspective</span><span class="p">,</span> <span class="n">get_homography</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="data-folders">
+<h2>Data Folders<a class="headerlink" href="#data-folders" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PROJECT_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;/home/andretelfer/shared/curated/fran/v4/&quot;</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">PROJECT_DIR</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datafiles</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">PROJECT_DIR</span> <span class="o">/</span> <span class="s1">&#39;datafiles.csv&#39;</span><span class="p">)</span>
+
+<span class="n">items</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">video</span> <span class="ow">in</span> <span class="n">datafiles</span><span class="o">.</span><span class="n">video</span><span class="p">:</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">video</span><span class="p">)</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">dlc_file</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">PROJECT_DIR</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;mouse_labels/</span><span class="si">{</span><span class="n">fname</span><span class="si">}</span><span class="s2">DLC*.h5&quot;</span><span class="p">))</span>
+    <span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;Video&#39;</span><span class="p">:</span> <span class="n">video</span><span class="p">,</span> <span class="s1">&#39;Keypoints&#39;</span><span class="p">:</span> <span class="s1">&#39;/&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dlc_file</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:])})</span>
+    
+<span class="n">datafiles</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+<span class="n">datafiles</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Video</th>
+      <th>Keypoints</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>videos/f1.mp4</td>
+      <td>mouse_labels/f1DLC_resnet50_agrpNov19shuffle1_...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>videos/f2.mp4</td>
+      <td>mouse_labels/f2DLC_resnet50_agrpNov19shuffle1_...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>videos/f3.mp4</td>
+      <td>mouse_labels/f3DLC_resnet50_agrpNov19shuffle1_...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>videos/f4.mp4</td>
+      <td>mouse_labels/f4DLC_resnet50_agrpNov19shuffle1_...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>videos/f5.mp4</td>
+      <td>mouse_labels/f5DLC_resnet50_agrpNov19shuffle1_...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>videos/m28.mp4</td>
+      <td>mouse_labels/m28DLC_resnet50_agrpNov19shuffle1...</td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td>videos/m29.mp4</td>
+      <td>mouse_labels/m29DLC_resnet50_agrpNov19shuffle1...</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>videos/m30.mp4</td>
+      <td>mouse_labels/m30DLC_resnet50_agrpNov19shuffle1...</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>videos/m31.mp4</td>
+      <td>mouse_labels/m31DLC_resnet50_agrpNov19shuffle1...</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>videos/m32.mp4</td>
+      <td>mouse_labels/m32DLC_resnet50_agrpNov19shuffle1...</td>
+    </tr>
+  </tbody>
+</table>
+<p>80 rows × 2 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">treatments</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">PROJECT_DIR</span> <span class="o">/</span> <span class="s1">&#39;experiment-data.csv&#39;</span><span class="p">)</span>
+<span class="n">treatments</span><span class="o">.</span><span class="n">injected_with</span> <span class="o">=</span> <span class="n">treatments</span><span class="o">.</span><span class="n">injected_with</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">treatments</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>latency_to_approach</th>
+      <th>time_in_corners</th>
+      <th>time_eating</th>
+      <th>amount_eaten</th>
+      <th>does_not_leave_corner</th>
+      <th>does_not_approach</th>
+      <th>injected_with</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>f1</td>
+      <td>15.00</td>
+      <td>136.99</td>
+      <td>9.84</td>
+      <td>0.3</td>
+      <td>False</td>
+      <td>False</td>
+      <td>saline-ghrelin</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>f2</td>
+      <td>36.43</td>
+      <td>122.55</td>
+      <td>0.00</td>
+      <td>0.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>saline-saline</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>f3</td>
+      <td>17.38</td>
+      <td>32.54</td>
+      <td>1.12</td>
+      <td>0.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>mt2-saline</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>f4</td>
+      <td>27.95</td>
+      <td>129.35</td>
+      <td>2.58</td>
+      <td>0.1</td>
+      <td>False</td>
+      <td>False</td>
+      <td>mt2-ghrelin</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>f5</td>
+      <td>9.88</td>
+      <td>201.56</td>
+      <td>2.73</td>
+      <td>0.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>saline-saline</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>m28</td>
+      <td>123.63</td>
+      <td>509.66</td>
+      <td>0.00</td>
+      <td>0.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>mt2-ghrelin</td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td>m29</td>
+      <td>16.22</td>
+      <td>343.84</td>
+      <td>17.49</td>
+      <td>0.1</td>
+      <td>False</td>
+      <td>False</td>
+      <td>saline-saline</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>m30</td>
+      <td>18.42</td>
+      <td>319.65</td>
+      <td>7.28</td>
+      <td>0.1</td>
+      <td>False</td>
+      <td>False</td>
+      <td>saline-ghrelin</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>m31</td>
+      <td>540.00</td>
+      <td>443.65</td>
+      <td>0.00</td>
+      <td>0.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>mt2-saline</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>m32</td>
+      <td>17.14</td>
+      <td>327.94</td>
+      <td>3.09</td>
+      <td>0.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>mt2-ghrelin</td>
+    </tr>
+  </tbody>
+</table>
+<p>80 rows × 8 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">registration_points</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">PROJECT_DIR</span> <span class="o">/</span> <span class="s2">&quot;registrations.csv&quot;</span><span class="p">)</span>
+<span class="n">registration_points</span><span class="p">[</span><span class="s1">&#39;video&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">registration_points</span><span class="p">[</span><span class="s1">&#39;axis-0&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">datafiles</span><span class="o">.</span><span class="n">Video</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="n">registration_points</span> <span class="o">=</span> <span class="n">registration_points</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;axis-1&#39;</span><span class="p">:</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;axis-2&#39;</span><span class="p">:</span> <span class="s1">&#39;y&#39;</span><span class="p">})</span>
+<span class="n">registration_points</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>shape-type</th>
+      <th>vertex-index</th>
+      <th>axis-0</th>
+      <th>x</th>
+      <th>y</th>
+      <th>video</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>31</th>
+      <td>7</td>
+      <td>polygon</td>
+      <td>3</td>
+      <td>7</td>
+      <td>474.043305</td>
+      <td>237.664651</td>
+      <td>videos/f8.mp4</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>8</td>
+      <td>polygon</td>
+      <td>1</td>
+      <td>8</td>
+      <td>149.671753</td>
+      <td>667.907474</td>
+      <td>videos/f9.mp4</td>
+    </tr>
+    <tr>
+      <th>252</th>
+      <td>64</td>
+      <td>polygon</td>
+      <td>0</td>
+      <td>63</td>
+      <td>72.333165</td>
+      <td>252.681853</td>
+      <td>videos/m16.mp4</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="registration">
+<h2>Registration<a class="headerlink" href="#registration" title="Permalink to this headline">#</a></h2>
+<p>Define the schema of the box in mm</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">400</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">padding</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">OUTPUT_WIDTH</span> <span class="o">=</span> <span class="n">w</span> <span class="c1">#+ padding*2</span>
+<span class="n">OUTPUT_HEIGHT</span> <span class="o">=</span> <span class="n">h</span> <span class="c1">#+ padding*2</span>
+
+<span class="n">REGISTRATION_POINTS</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">0</span><span class="o">+</span><span class="n">p</span><span class="p">,</span> <span class="mi">0</span><span class="o">+</span><span class="n">p</span><span class="p">],</span>
+    <span class="p">[</span><span class="n">w</span><span class="o">+</span><span class="n">p</span><span class="p">,</span> <span class="mi">0</span><span class="o">+</span><span class="n">p</span><span class="p">],</span>
+    <span class="p">[</span><span class="n">w</span><span class="o">+</span><span class="n">p</span><span class="p">,</span> <span class="n">h</span><span class="o">+</span><span class="n">p</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="o">+</span><span class="n">p</span><span class="p">,</span> <span class="n">h</span><span class="o">+</span><span class="n">p</span><span class="p">],</span>
+<span class="p">])</span>
+<span class="n">REGISTRATION_POINTS</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[  0,   0],
+       [500,   0],
+       [500, 400],
+       [  0, 400]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">video</span><span class="p">,</span> <span class="n">points</span> <span class="ow">in</span> <span class="n">registration_points</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;video&quot;</span><span class="p">):</span>
+    <span class="n">points</span> <span class="o">=</span> <span class="n">points</span><span class="p">[[</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">T</span> <span class="o">=</span> <span class="n">get_homography</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">REGISTRATION_POINTS</span><span class="p">)</span>
+    
+    <span class="n">row</span> <span class="o">=</span> <span class="n">datafiles</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">datafiles</span><span class="o">.</span><span class="n">Video</span> <span class="o">==</span> <span class="n">video</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">keypoints</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_hdf</span><span class="p">(</span><span class="n">PROJECT_DIR</span> <span class="o">/</span> <span class="n">row</span><span class="o">.</span><span class="n">Keypoints</span><span class="p">)</span>
+    <span class="n">keypoints</span> <span class="o">=</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">keypoints</span><span class="o">.</span><span class="n">xs</span><span class="p">(</span><span class="s2">&quot;likelihood&quot;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s2">&quot;coords&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0.6</span><span class="p">)</span>
+    <span class="n">keypoints</span> <span class="o">=</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">interpolate</span><span class="p">()</span>
+    
+    <span class="n">centroid</span> <span class="o">=</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s2">&quot;coords&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">VideoReader</span><span class="p">(</span><span class="n">PROJECT_DIR</span> <span class="o">/</span> <span class="n">video</span><span class="p">)</span>
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">reader</span><span class="p">[</span><span class="mi">1000</span><span class="p">]</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+    <span class="n">gs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">GridSpec</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[:</span><span class="mi">7</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">centroid</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">centroid</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">centroid</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    
+    <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">points</span><span class="o">.</span><span class="n">T</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Pixels&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Pixels&quot;</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">7</span><span class="p">:])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">warpPerspective</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">h</span><span class="p">)))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;mm&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;mm&quot;</span><span class="p">)</span>
+    
+    <span class="n">keypoints</span> <span class="o">=</span> <span class="n">transform_dataframe_to_perspective</span><span class="p">(</span><span class="n">keypoints</span><span class="p">,</span> <span class="n">T</span><span class="p">)</span>
+    <span class="n">centroid</span> <span class="o">=</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s2">&quot;coords&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">centroid</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">centroid</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">centroid</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">w</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">h</span><span class="p">])</span> 
+    
+    <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">REGISTRATION_POINTS</span><span class="o">.</span><span class="n">T</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Registering video coordinates&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/real_data_conversion_11_0.png" src="_images/real_data_conversion_11_0.png" />
+</div>
+</div>
+</section>
+<section id="coordinates-to-grid">
+<h2>Coordinates to grid<a class="headerlink" href="#coordinates-to-grid" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grid_square_size</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1"># in mm</span>
+
+<span class="n">vlines</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">w</span><span class="o">+</span><span class="n">grid_square_size</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">grid_square_size</span><span class="p">)</span>
+<span class="n">hlines</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">h</span><span class="o">+</span><span class="n">grid_square_size</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">grid_square_size</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">vlines</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="n">hlines</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">warpPerspective</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">h</span><span class="p">)))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;mm&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;mm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;mm&#39;)
+</pre></div>
+</div>
+<img alt="_images/real_data_conversion_13_1.png" src="_images/real_data_conversion_13_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_path_between_points</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">):</span>
+        <span class="n">dirx</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x1</span> <span class="o">-</span> <span class="n">x0</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span> 
+        <span class="n">diry</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">y1</span> <span class="o">-</span> <span class="n">y0</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">xi</span> <span class="o">=</span> <span class="n">x0</span>
+        <span class="n">yi</span> <span class="o">=</span> <span class="n">y0</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="p">(</span><span class="n">xi</span> <span class="o">==</span> <span class="n">x1</span> <span class="ow">and</span> <span class="n">yi</span> <span class="o">==</span> <span class="n">y1</span><span class="p">):</span>
+            <span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">xi</span><span class="p">,</span> <span class="n">yi</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">xi</span> <span class="o">!=</span> <span class="n">x1</span><span class="p">:</span>
+                <span class="n">xi</span> <span class="o">+=</span> <span class="n">dirx</span>
+            <span class="k">elif</span> <span class="n">yi</span> <span class="o">!=</span> <span class="n">y1</span><span class="p">:</span>
+                <span class="n">yi</span> <span class="o">+=</span> <span class="n">diry</span>
+
+        <span class="k">return</span> <span class="n">path</span>
+    
+<span class="k">def</span> <span class="nf">coordinates_to_path</span><span class="p">(</span><span class="n">centroid</span><span class="p">,</span> <span class="n">grid_square_size</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">centroid</span><span class="o">.</span><span class="n">x</span> <span class="o">//</span> <span class="n">grid_square_size</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">centroid</span><span class="o">.</span><span class="n">y</span> <span class="o">//</span> <span class="n">grid_square_size</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+    <span class="c1"># Clip around bounds</span>
+    <span class="n">xmin</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">xmax</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">w</span> <span class="o">//</span> <span class="n">grid_square_size</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">ymin</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">ymax</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">h</span> <span class="o">//</span> <span class="n">grid_square_size</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span><span class="p">)</span>
+
+    <span class="c1"># Create the path</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">path_frame</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">xlast</span> <span class="o">=</span> <span class="kc">None</span> 
+    <span class="n">ylast</span> <span class="o">=</span> <span class="kc">None</span> 
+    <span class="n">p0</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># Starting position</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+        <span class="c1"># Skip until the first element</span>
+        <span class="k">if</span> <span class="n">xlast</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">ylast</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">index</span> <span class="ow">and</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">y</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
+                <span class="n">xlast</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="n">ylast</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+            <span class="k">continue</span>
+
+        <span class="n">dx</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">xlast</span>
+        <span class="n">dy</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">ylast</span>        
+        <span class="c1"># If elements are not neighbors, add an artificial path</span>
+        <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">dx</span><span class="p">)</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">dy</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">subpath</span> <span class="o">=</span> <span class="n">create_path_between_points</span><span class="p">(</span><span class="n">xlast</span><span class="p">,</span> <span class="n">ylast</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">path</span> <span class="o">+=</span> <span class="n">subpath</span>
+            <span class="n">path_frame</span> <span class="o">+=</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">subpath</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">xlast</span><span class="p">,</span> <span class="n">ylast</span><span class="p">))</span>
+            <span class="n">path_frame</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+        <span class="n">xlast</span><span class="p">,</span> <span class="n">ylast</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        
+    <span class="c1"># Validate</span>
+    <span class="n">path_x</span><span class="p">,</span> <span class="n">path_y</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">path</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">path_x</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="n">path_x</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">path_x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">dy</span> <span class="o">=</span> <span class="n">path_y</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">path_y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">dx</span><span class="p">)</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">dy</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span>
+    
+    <span class="k">return</span> <span class="n">path</span><span class="p">,</span> <span class="n">path_frame</span>
+
+<span class="n">path</span><span class="p">,</span> <span class="n">path_frame</span> <span class="o">=</span> <span class="n">coordinates_to_path</span><span class="p">(</span><span class="n">centroid</span><span class="p">,</span> <span class="n">grid_square_size</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.animation</span> <span class="kn">import</span> <span class="n">FuncAnimation</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn-pastel&#39;</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">()</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">warpPerspective</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">h</span><span class="p">)))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="n">hlines</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">vlines</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">vlines</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">hlines</span><span class="p">))</span>
+
+<span class="n">path</span><span class="p">,</span> <span class="n">path_frame</span> <span class="o">=</span> <span class="n">coordinates_to_path</span><span class="p">(</span><span class="n">centroid</span><span class="p">,</span> <span class="n">grid_square_size</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">animate</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">1000</span> <span class="o">+</span> <span class="n">i</span>
+    <span class="n">frame_index</span> <span class="o">=</span> <span class="n">path_frame</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">reader</span><span class="p">[</span><span class="n">frame_index</span><span class="p">]</span>
+    <span class="n">im</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">warpPerspective</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">h</span><span class="p">)))</span>
+    
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">grid</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">([</span><span class="n">x</span><span class="o">*</span><span class="n">grid_square_size</span><span class="p">,</span> <span class="n">y</span><span class="o">*</span><span class="n">grid_square_size</span><span class="p">],</span> <span class="n">grid_square_size</span><span class="p">,</span> <span class="n">grid_square_size</span><span class="p">))</span>
+    
+    <span class="k">return</span> <span class="n">im</span><span class="p">,</span>
+
+    <span class="c1"># line.set_data(x, y)</span>
+    <span class="c1"># return line,</span>
+
+<span class="n">anim</span> <span class="o">=</span> <span class="n">FuncAnimation</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">animate</span><span class="p">,</span> <span class="n">frames</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">blit</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">anim</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;demo.gif&#39;</span><span class="p">,</span> <span class="n">writer</span><span class="o">=</span><span class="s1">&#39;imagemagick&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">cla</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MovieWriter imagemagick unavailable; using Pillow instead.
+</pre></div>
+</div>
+</div>
+</div>
+<img src="./demo.gif"/></section>
+<section id="coordinates-to-actions">
+<h2>Coordinates to actions<a class="headerlink" href="#coordinates-to-actions" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">path_to_actions</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="n">actions</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">path</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+        <span class="c1"># Actions are defined in the environment</span>
+        <span class="k">if</span> <span class="n">dy</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">action</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">elif</span> <span class="n">dx</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">action</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">dy</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">action</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="k">elif</span> <span class="n">dx</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">action</span> <span class="o">=</span> <span class="mi">3</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">action</span> <span class="o">=</span> <span class="mi">4</span>
+    
+        <span class="n">actions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+    
+    <span class="c1"># validate</span>
+    <span class="n">xi</span><span class="p">,</span> <span class="n">yi</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">action</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">actions</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">action</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">yi</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">action</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">xi</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">action</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">yi</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">action</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">xi</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">pass</span>
+        
+        <span class="k">assert</span> <span class="p">(</span><span class="n">xi</span> <span class="o">==</span> <span class="n">path</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span> <span class="ow">and</span> <span class="p">(</span><span class="n">yi</span> <span class="o">==</span> <span class="n">path</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+        
+    <span class="k">return</span> <span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">actions</span>
+
+<span class="n">s0</span><span class="p">,</span> <span class="n">actions</span> <span class="o">=</span> <span class="n">path_to_actions</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="final">
+<h2>Final<a class="headerlink" href="#final" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xmin</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">xmax</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">w</span> <span class="o">//</span> <span class="n">grid_square_size</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">ymin</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">ymax</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">h</span> <span class="o">//</span> <span class="n">grid_square_size</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">xmax</span><span class="p">,</span> <span class="n">ymax</span>  
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(24, 19)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">output_directory</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;mouse_rl_dataset0&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">output_directory</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;clear existing directory? (y/n)&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span>
+    <span class="o">!</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span><span class="o">{</span>output_directory<span class="o">}</span>
+    
+<span class="n">output_directory</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+<span class="k">for</span> <span class="n">video</span><span class="p">,</span> <span class="n">points</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">registration_points</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;video&quot;</span><span class="p">)):</span>
+    <span class="c1"># Load and transform data </span>
+    <span class="n">points</span> <span class="o">=</span> <span class="n">points</span><span class="p">[[</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">T</span> <span class="o">=</span> <span class="n">get_homography</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">REGISTRATION_POINTS</span><span class="p">)</span>
+    
+    <span class="n">row</span> <span class="o">=</span> <span class="n">datafiles</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">datafiles</span><span class="o">.</span><span class="n">Video</span> <span class="o">==</span> <span class="n">video</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">keypoints</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_hdf</span><span class="p">(</span><span class="n">PROJECT_DIR</span> <span class="o">/</span> <span class="n">row</span><span class="o">.</span><span class="n">Keypoints</span><span class="p">)</span>
+    <span class="n">keypoints</span> <span class="o">=</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">keypoints</span><span class="o">.</span><span class="n">xs</span><span class="p">(</span><span class="s2">&quot;likelihood&quot;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s2">&quot;coords&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0.6</span><span class="p">)</span>
+    <span class="n">keypoints</span> <span class="o">=</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">interpolate</span><span class="p">()</span>    
+    <span class="n">centroid</span> <span class="o">=</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s2">&quot;coords&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    
+    <span class="n">keypoints</span> <span class="o">=</span> <span class="n">transform_dataframe_to_perspective</span><span class="p">(</span><span class="n">keypoints</span><span class="p">,</span> <span class="n">T</span><span class="p">)</span>
+    <span class="n">centroid</span> <span class="o">=</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s2">&quot;coords&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    
+    <span class="c1"># Create path from centroid position</span>
+    <span class="n">path</span><span class="p">,</span> <span class="n">path_frame</span> <span class="o">=</span> <span class="n">coordinates_to_path</span><span class="p">(</span><span class="n">centroid</span><span class="p">,</span> <span class="n">grid_square_size</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
+    
+    <span class="c1"># Path to actions </span>
+    <span class="n">s0</span><span class="p">,</span> <span class="n">actions</span> <span class="o">=</span> <span class="n">path_to_actions</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    
+    <span class="c1"># Get treatment information</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">video</span><span class="p">)</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">treatment</span> <span class="o">=</span> <span class="n">treatments</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">treatments</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="nb">id</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">injected_with</span>
+    
+    <span class="c1"># Saving</span>
+    <span class="n">output_file</span> <span class="o">=</span> <span class="n">output_directory</span> <span class="o">/</span> <span class="n">treatment</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2">.json&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">output_file</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+        <span class="n">output_file</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">({</span>
+            <span class="s2">&quot;initial_position&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+            <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="n">actions</span><span class="p">,</span>
+            <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+            <span class="s2">&quot;corresponding_frames&quot;</span><span class="p">:</span> <span class="n">path_frame</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="nb">id</span><span class="p">,</span>
+            <span class="s2">&quot;treatment&quot;</span><span class="p">:</span> <span class="n">treatment</span>
+        <span class="p">},</span> <span class="n">fp</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>clear existing directory? (y/n) y
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████| 80/80 [00:19&lt;00:00,  4.11it/s]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="playback_agent.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Playback Agent</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By The Jupyter Book Community<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
