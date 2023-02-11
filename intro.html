@@ -353,6 +353,12 @@ title="Print to PDF"
 <h1>COMP5900 Mice IRL<a class="headerlink" href="#comp5900-mice-irl" title="Permalink to this headline">#</a></h1>
 <p>Using Inverse Reinforcement Learning to infer the reward functions of mice in a popular behavioural paradigm (Open Field Test)
 <img alt="" src="_images/demo.gif" /></p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="playback_agent.html">Playback Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="real_data_conversion.html">Experiment Data Conversion</a></li>
+</ul>
+</div>
 <section id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">A</span><span class="o">-</span><span class="n">Telfer</span><span class="o">/</span><span class="n">comp5900j</span><span class="o">-</span><span class="n">project</span><span class="o">.</span><span class="n">git</span>
@@ -364,19 +370,17 @@ title="Print to PDF"
 </section>
 <section id="building-documentation">
 <h2>Building documentation<a class="headerlink" href="#building-documentation" title="Permalink to this headline">#</a></h2>
-<p>Install with</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span>
+<p>Install tpols with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span>
 </pre></div>
 </div>
 <p>Then build changes</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jb</span> <span class="n">build</span> <span class="n">docs</span>
 </pre></div>
 </div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="playback_agent.html">Playback Agent</a></li>
-<li class="toctree-l1"><a class="reference internal" href="real_data_conversion.html">Experiment Data Conversion</a></li>
-</ul>
+<p>Finally upldate</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">docs</span><span class="o">/</span><span class="n">_build</span><span class="o">/</span><span class="n">html</span>
+</pre></div>
 </div>
 </section>
 </section>

@@ -2,6 +2,10 @@
 Using Inverse Reinforcement Learning to infer the reward functions of mice in a popular behavioural paradigm (Open Field Test)
 ![](demo.gif)
 
+
+```{tableofcontents}
+```
+
 ## Setup
 ```
 git clone git@github.com:A-Telfer/comp5900j-project.git
@@ -11,9 +15,9 @@ python demo.py
 ```
 
 ## Building documentation
-Install with
+Install tpols with
 ```
-pip install jupyter-book
+pip install jupyter-book ghp-import
 ```
 
 Then build changes
@@ -21,6 +25,7 @@ Then build changes
 jb build docs
 ```
 
-
-```{tableofcontents}
+Finally upldate
+```
+ghp-import -n -p -f docs/_build/html
 ```
