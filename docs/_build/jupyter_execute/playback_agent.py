@@ -3,11 +3,11 @@
 
 # # Playback Agent
 
-# In[1]:
+# In[ ]:
 
 
 import gymnasium
-import mouse_rl
+import mouse_irl
 import json
 
 from pathlib import Path
@@ -18,13 +18,8 @@ from pathlib import Path
 # In[2]:
 
 
-dataset = Path("../exp0_data")
-demo_datafile = dataset / "saline-saline" / "m1.json"
-
-with open(demo_datafile) as fp:
-    data = json.load(fp)
-
-print(data.keys())
+dataset = mouse_irl.datasets.Dataset0()
+data = dataset.load(dataset.find_datafile("saline-saline", "m1"))
 
 
 # ## Simulate in the RL env
@@ -32,7 +27,7 @@ print(data.keys())
 # In[3]:
 
 
-env = gymnasium.make('mouse_rl/OpenFieldEnv-v0')
+env = gymnasium.make('mouse_irl/OpenFieldEnv-v0')
 env.reset(mouse_position=data['initial_position'])
 
 for i, action in enumerate(data['actions']):
