@@ -1,3 +1,4 @@
 gymnasium==0.27.1
 numpy==1.24.2
 jupyter-book==0.13.2
+pygame==2.1.2

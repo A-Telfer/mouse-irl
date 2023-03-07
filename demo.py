@@ -1,17 +1,15 @@
 import gymnasium
-import mouse_rl
-import json
+import mouse_irl
 
 from pathlib import Path
 
 # Load the data
-dataset = Path("./exp0_data")
-demo_datafile = dataset / "saline-saline" / "m1.json"
-with open(demo_datafile) as fp:
-    data = json.load(fp)
+dataset = mouse_irl.datasets.Dataset0()
+print(dataset.groups)
+data = dataset.load(dataset.find_datafile("saline-saline", "m1"))
 
 # Create the environment
-env = gymnasium.make('mouse_rl/OpenFieldEnv-v0')
+env = gymnasium.make('mouse_irl/OpenFieldEnv-v0')
 env.reset(mouse_position=data['initial_position'])
 
 # Run the mouse behaviour in the environment
