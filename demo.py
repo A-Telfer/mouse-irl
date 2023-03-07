@@ -4,6 +4,7 @@ import mouse_irl
 from pathlib import Path
 
 # Load the data
+import mouse_irl
 dataset = mouse_irl.datasets.Dataset0()
 print(dataset.groups)
 data = dataset.load(dataset.find_datafile("saline-saline", "m1"))

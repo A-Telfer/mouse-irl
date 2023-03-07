@@ -35,5 +35,5 @@ class Dataset0:
 
     @property
     def groups(self):
-        return list(self.path.glob("*"))
+        return [p.parts[-1] for p in self.path.glob("*")]
 
