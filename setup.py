@@ -2,7 +2,7 @@ from setuptools import setup, find_namespace_packages
 
 setup(
     name="mouse_irl",
-    version="0.0.2",
+    version="0.0.3",
     install_requires=["gymnasium==0.27.1", "pygame==2.1.2"],
     packages=find_namespace_packages(where="src"),
     package_dir = {'': 'src'},

@@ -9,7 +9,7 @@ from gymnasium import spaces
 
 
 class OpenFieldEnv(gym.Env):
-    metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 30}
+    metadata = {"render_modes": ["human", "rgb_array"]}
     
     def __init__(self, width=24, height=19, fps=30, seconds=600, render_mode='human'):
         self.width = width
@@ -144,7 +144,7 @@ class OpenFieldEnv(gym.Env):
 
             # We need to ensure that human-rendering occurs at the predefined framerate.
             # The following line will automatically add a delay to keep the framerate stable.
-            self.clock.tick(self.metadata["render_fps"])
+            self.clock.tick(self.fps)
         else:  # rgb_array
             return np.transpose(
                 np.array(pygame.surfarray.pixels3d(canvas)), axes=(1, 0, 2)
