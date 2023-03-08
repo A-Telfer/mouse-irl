@@ -19,7 +19,7 @@ from pathlib import Path
 
 
 dataset = mouse_irl.datasets.Dataset0()
-data = dataset.load(dataset.find_datafile("saline-saline", "m1"))
+data = dataset['saline-ghrelin', 1]
 
 
 # ## Simulate in the RL env
