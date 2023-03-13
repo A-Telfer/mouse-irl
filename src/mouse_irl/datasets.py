@@ -26,7 +26,7 @@ class Dataset0:
         if path is None:
             self.path = Path(__file__).parent / 'data' / 'exp0'
         else:
-            self.path = path
+            self.path = Path(path)
 
     def find_datafile(self, group, id):
         return next(self.path.glob(f"{group}/{id}.json"))
