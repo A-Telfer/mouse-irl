@@ -24,8 +24,6 @@ class Dataset0:
 
     def __init__(self):
         self.path = Path(__file__).parent / 'data' / 'exp0'
-        self.groups = [p.parts[-1] for p in self.path.glob("*")]
-        self.recordings = {g : self.find_datafiles(g) for g in self.groups}
 
     def find_datafile(self, group, id):
         return next(self.path.glob(f"{group}/{id}.json"))
@@ -33,6 +31,14 @@ class Dataset0:
     def find_datafiles(self, group='*'):
         assert group in self.groups
         return list(self.path.glob(f"{group}/*.json"))
+
+    @property
+    def groups(self):
+        return [p.parts[-1] for p in self.path.glob("*")]
+    
+    @property
+    def recordings(self):
+        return {g : self.find_datafiles(g) for g in self.groups}
 
     def __iter__(self):
         return iter(self.groups)
