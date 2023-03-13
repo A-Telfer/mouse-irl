@@ -6,7 +6,7 @@ setup(
     install_requires=["gymnasium==0.27.1", "pygame==2.1.2"],
     packages=find_namespace_packages(where="src"),
     package_dir = {'': 'src'},
-    package_data = {'mouse_irl.data': ['**/*.json']},
+    package_data = {'mouse_irl.data': ['src/mouse_irl/data/**/*.json']},
     include_package_data=True,
     exclude_package_data={"mypkg": [".gitattributes"]}
 )
