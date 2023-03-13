@@ -22,8 +22,11 @@ class Dataset0:
     - mt2-saline is the least active group.
     """
 
-    def __init__(self):
-        self.path = Path(__file__).parent / 'data' / 'exp0'
+    def __init__(self, path=None):
+        if path is None:
+            self.path = Path(__file__).parent / 'data' / 'exp0'
+        else:
+            self.path = path
 
     def find_datafile(self, group, id):
         return next(self.path.glob(f"{group}/{id}.json"))
